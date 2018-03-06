@@ -1,0 +1,27 @@
+p {
+  font-family: sans-serif;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+
+H1 {
+  background-color: grey
+  color: teal;
+  font-family: sans-serif }
+
+H2, H3, H4 {
+    background-color: grey
+    color: teal;
+    font-family: sans-serif }
+
+#project-title {
+    text-transform: capitalize;
+}
+
+.assignment {
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+}
