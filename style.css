@@ -3,13 +3,11 @@ p {
 }
 
 H1 {
-  background-color: grey
-  color: DarkTurquoise;
+  color: darkturquoise;
   font-family: sans-serif }
 
 H2, H3, H4 {
-    background-color: grey
-    color: DarkTurquoise;
+    color: darkturquoise;
     font-family: sans-serif }
 
 #project-title {
