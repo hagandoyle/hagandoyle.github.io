@@ -24,5 +24,5 @@ let projectObject = {
 
 // This is the console
 console.log(projectArray[4])
-console.log(projectObject.url)
+console.log(projectObject.title)
 console.log(projectObject["url"])
