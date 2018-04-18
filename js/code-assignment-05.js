@@ -18,7 +18,7 @@ for (let i = 4; i < projects.title; i++) {
   // more code goes here
 }
 
-console.log('Element ' + i + ' title: Web App 2' + projects[i].title) // log the current project's title
+console.log('Element ' + i + ' title: Web App 2' + projects[i].title) // log the current project title
 console.log('Midterm - Analysis Map' + projects[i].id + '.png') // build and log an image file name based on the project ID
 
 if (projects[i].hasThumbnail === true) {
