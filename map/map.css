@@ -15,10 +15,16 @@ H2, H3, H4 {
 }
 
 .assignment {
-  padding-top: 10px;
-  padding-right: 10px;
-  padding-bottom: 10px;
-  padding-left: 10px;
+  padding-top: 80px;
+  padding-right: 80px;
+  padding-bottom: 80px;
+  padding-left: 80px;
 }
 
-#BatonRougeLA { height: 160px }
+#BatonRouge-LA {height:250px}
+#BatonRouge-LA {
+  padding-top: 80px
+  padding-right: 80px
+  padding-bottom: 80px
+  padding-left: 80px
+}

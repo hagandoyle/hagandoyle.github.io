@@ -1,13 +1,7 @@
-var L = require('leaflet')
-var l = require('basemap')
-L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', {
-  attribution: 'Tiles &copy; Esri &mdash; Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, Esri Japan, METI, Esri China (Hong Kong), Esri (Thailand), TomTom, 2012'
-})
-
 // let someName = L.map('BatonRouge-LA').setView([yourLat, yourLon], yourZoom)
-let mymap = L.map('BatonRouge-LA').setView([30.414471, -91.178664], 18)
+let mymap = L.map('BatonRouge-LA').setView([30.414471, -91.178664], 15)
 
-l.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}').addTo(mymap)
+L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}').addTo(mymap)
 
 let marker = L.marker([30.414471, -91.178664]).addTo(mymap)
 

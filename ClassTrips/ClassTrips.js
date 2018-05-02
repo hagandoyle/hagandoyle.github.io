@@ -1,29 +1,28 @@
 var L = require('leaflet')
-// create an operational layer that is empty for now
-let myLayer = L.layerGroup().addTo(map)
+var l = require('basemap')
+L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', {
+  attribution: 'Tiles &copy; Esri &mdash; Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, Esri Japan, METI, Esri China (Hong Kong), Esri (Thailand), TomTom, 2012'
+})
 
-// add all of the GeoJSON data to the empty layer we created
-function addMyData (feature, layer) {
-  myLayer.addLayer(layer)
-  // some other code can go here, like adding a popup with layer.bindPopup("Hello")
+// let someName = L.map('ClassTrips').setView([yourLat, yourLon], yourZoom)
+let mymap = L.map('ClassTrips').setView([38.6, -96.5], 5)
+
+l.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}').addTo(mymap)
+
+let marker = L.marker([36.106965, -112.112997]).addTo(mymap)
+
+
+let polygon = L.polygon([
+  [30.413323, -91.176218],
+  [30.415840, -91.176368],
+  [30.415710, -91.178342],
+  [30.413231, -91.178171]
+]).addTo(mymap)
+
+polygon.bindPopup('The Parade Ground\'s at Louisiana State University')
+marker.bindPopup('Memorial Bell Tower at Louisiana State University')
+
+function logCurrentCoordinates (event) {
+  console.log('You clicked the map at ' + event.latlng)
 }
-
-// create an options object that specifies which function to call on each feature
-let myLayerOptions = {
-  onEachFeature: addMyData
-}
-
-// create the GeoJSON layer from myLayerData
-L.geoJSON(myLayerData, myLayerOptions).addTo(map)
-
-// an object containing a list of basemaps (makes more sense to use with multiple basemaps)
-let basemaps = {
-  'My Basemap': streets // replace streets with your basemap object, not shown in this snippet
-}
-
-// an object containing a list of operation layers
-let layers = {
-  'My Layer': myLayer
-}
-
-L.control.layers(basemaps, layers).addTo(map)
+mymap.on('click', logCurrentCoordinates)
