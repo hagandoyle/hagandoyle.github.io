@@ -1,3 +1,4 @@
+var L = require('leaflet')
 // create an operational layer that is empty for now
 let myLayer = L.layerGroup().addTo(map)
 

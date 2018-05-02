@@ -20,7 +20,3 @@ function logCurrentCoordinates (event) {
   console.log('You clicked the map at ' + event.latlng)
 }
 mymap.on('click', logCurrentCoordinates)
-
-mymap.on('click', function (event) {
-  console.log('You clicked the map at ' + event.latlng)
-})
