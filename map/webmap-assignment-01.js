@@ -1,3 +1,5 @@
+var L = require('leaflet')
+var l = require('basemap')
 // let someName = L.map('BatonRouge-LA').setView([yourLat, yourLon], yourZoom)
 let mymap = L.map('BatonRouge-LA').setView([51.505, -0.09], 13)
 
