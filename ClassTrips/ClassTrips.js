@@ -56,8 +56,6 @@ let polygonStyle = {
 // draw a shape feature with the specified vertices and style
 let polygon = L.polygon(polygonCorners, polygonStyle).addTo(mymap)
 
-
-
 function logCurrentCoordinates (event) {
   console.log('You clicked the map at ' + event.latlng)
 }
