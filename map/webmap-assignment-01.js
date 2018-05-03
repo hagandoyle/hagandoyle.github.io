@@ -1,7 +1,7 @@
 // let someName = L.map('BatonRouge-LA').setView([yourLat, yourLon], yourZoom)
 let mymap = L.map('BatonRouge-LA').setView([30.414471, -91.178664], 15)
 
-L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}').addTo(mymap)
+let myLightmap1 = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}').addTo(mymap)
 
 let marker = L.marker([30.414471, -91.178664]).addTo(mymap)
 

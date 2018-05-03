@@ -1,0 +1,30 @@
+p {
+  font-family: sans-serif;
+}
+
+H1 {
+  color: darkturquoise;
+  font-family: sans-serif }
+
+H2, H3, H4 {
+    color: darkturquoise;
+    font-family: sans-serif }
+
+#project-title {
+    text-transform: capitalize;
+}
+
+.assignment {
+  padding-top: 80px;
+  padding-right: 80px;
+  padding-bottom: 80px;
+  padding-left: 80px;
+}
+
+#ClassTrips {height:400px}
+#ClassTrips {
+  padding-top: 80px
+  padding-right: 80px
+  padding-bottom: 80px
+  padding-left: 80px
+}
