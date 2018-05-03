@@ -6,8 +6,8 @@ L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_L
 let BellTower = L.icon({
   iconUrl: 'bell tower.png',
   iconSize: [25, 75], // size of the icon
-  iconAnchor: [0,0], // point of the icon which will correspond to marker's location
-  popupAnchor: [1,1] // point from which the popup should open relative to the iconAnchor
+  iconAnchor: [0, 0], // point of the icon which will correspond to marker's location
+  popupAnchor: [1, 1] // point from which the popup should open relative to the iconAnchor
 })
 
 // place a marker feature at a location
