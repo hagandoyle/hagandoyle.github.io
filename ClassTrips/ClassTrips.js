@@ -1,7 +1,7 @@
 // let someName = L.map('ClassTrips').setView([yourLat, yourLon], yourZoom)
-let mymap = L.map('ClassTrips').setView([38, -98], 5)
+let mymap = L.map('ClassTrips').setView([38, -98], 3)
 
-let myLightmap1 = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}').addTo(mymap)
+let myLightmap1 = L.tileLayer('http://{s}.tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png').addTo(mymap)
 
 let myDarkmap2 = L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_nolabels/{z}/{x}/{y}.png').addTo(mymap)
 
