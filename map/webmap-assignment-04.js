@@ -6,14 +6,16 @@ mymap.on('click', function (event) {
 // create basemap layer
 L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}').addTo(mymap)
 
-let myGeojson = {"type":"FeatureCollection"...} //use your own geojson
+let myGeojson = {'https://maps.brla.gov/gis/rest/services/Demographic/Census_Block_Group/MapServer/0/query?where=1%3D1&outFields=*&outSR=4326&f=json'}
+
+
 
 
 function myStyle (feature) {
   let age = feature.properties.MED_AGE
-  let color = 'Olive'
+  let color = 'Yellow'
   if (age < 38) {
-    color = 'Green'
+    color = 'Orange'
   }
   let myStyle = {
     color: color,
@@ -23,7 +25,7 @@ function myStyle (feature) {
   return myStyle
 }
 function myPopup (feature, layer) {
-  let name = feature.properties.STATE_NAME
+  let name = feature.properties.PARISH_NAME
   let age = feature.properties.MED_AGE
   layer.bindPopup('Median age of ' + name + ': ' + age + '<br>National average: 38')
 }
